@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\icete\\Documents\\Cille\\Cille\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B06E48FD-A40F-D396-0879-633F8D4A857A}|Assembly-CSharp.csproj|c:\\users\\icete\\documents\\cille\\cille\\assets\\scripts\\marblemove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B06E48FD-A40F-D396-0879-633F8D4A857A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\marblemove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MarbleMove.cs",
+              "DocumentMoniker": "C:\\Users\\icete\\Documents\\Cille\\Cille\\Assets\\Scripts\\MarbleMove.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MarbleMove.cs",
+              "ToolTip": "C:\\Users\\icete\\Documents\\Cille\\Cille\\Assets\\Scripts\\MarbleMove.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MarbleMove.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCMAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T21:04:30.63Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
