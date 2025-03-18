@@ -16,6 +16,8 @@ public class MarbleMove : MonoBehaviour
     public Canvas canvas;
     private int side = 1;
 
+    public InputField input;
+
     private int x = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +25,7 @@ public class MarbleMove : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         cam = GameObject.FindAnyObjectByType<Camera>();
         line = GameObject.FindAnyObjectByType<Line>();
+        input = GameObject.FindAnyObjectByType<InputField>();
         //rb.AddForce(new Vector3(0, 0, 20), ForceMode.VelocityChange);
     }
 
@@ -38,9 +41,13 @@ public class MarbleMove : MonoBehaviour
             Vector3 direction = (mouseWorldPos - cilleLike.position).normalized;
 
             arrow.position = cilleLike.position - direction * 2;
-            arrow.forward = -direction;
+            arrow.rotation = Quaternion.LookRotation(-direction, Vector3.forward);
+            //float angle = Vector3.Angle(transform.forward, direction);
+            //arrow.RotateAround(cilleLike.position, Vector3.forward, angle);
+            Debug.Log(direction);
         }
 
+        
         //Debug.Log(slider.value);
         if(x == 1)
         {
@@ -53,21 +60,36 @@ public class MarbleMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && x == 1)
         {
-            rb.AddForce(new Vector3( (cilleLike.position.x - arrow.position.x) * -20, 0, (cilleLike.position.z - arrow.position.z) * -slider.value/2), ForceMode.VelocityChange);
+            rb.AddForce(new Vector3( (cilleLike.position.x - arrow.position.x) * -slider.value/2, 0, (cilleLike.position.z - arrow.position.z) * -slider.value/2), ForceMode.VelocityChange);
             slider.gameObject.SetActive(false);
             arrow.gameObject.SetActive(false);
             StartCoroutine(line.TakeMarble());
             x = 2;
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && x == 0)
+        if (input != null)
         {
-            x = 1;
+            if (Input.GetKeyDown(KeyCode.Mouse0) && x == 0 && !input.gameObject.activeSelf)
+            {
+                x = 1;
+            }
+            else if (Input.GetKeyDown(KeyCode.Mouse1) && x == 1)
+            {
+                x = 0;
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Mouse1) && x == 1)
+        else if(input == null)
         {
-            x = 0;
+            if (Input.GetKeyDown(KeyCode.Mouse0) && x == 0)
+            {
+                x = 1;
+            }
+            else if (Input.GetKeyDown(KeyCode.Mouse1) && x == 1)
+            {
+                x = 0;
+            }
         }
+        
         
     }
 }

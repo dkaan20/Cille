@@ -8,8 +8,6 @@ public class Line : MonoBehaviour
     private int player1Score = 0;
     private int player2Score = 0;
 
-    private int y = 0;
-
     public TMPro.TMP_Text text1;
     public TMPro.TMP_Text text2;
     public IEnumerator TakeMarble()
@@ -19,14 +17,12 @@ public class Line : MonoBehaviour
         GameObject[] marble = GameObject.FindGameObjectsWithTag("Marble");
         foreach (GameObject mar in marble)
         {
-            if(mar.gameObject.transform.position.z >= 0.03 || mar.gameObject.transform.position.y <= -0.03)
+            if(mar.gameObject.transform.position.z >= 10.03 || mar.gameObject.transform.position.y <= -10.03)
             {
                 Destroy(mar);
                 x++;
                 Debug.Log(x);
-            }
-
-           
+            } 
         }
         if (turnSystem.player == 1)
         {
