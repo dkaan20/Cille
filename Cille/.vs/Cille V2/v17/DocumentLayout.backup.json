@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dunda\\Desktop\\Cille V2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4E64C4A6-C25B-0449-3A1D-ABEC120B3653}|Assembly-CSharp.csproj|c:\\users\\dunda\\desktop\\cille v2\\assets\\scripts\\turnsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E64C4A6-C25B-0449-3A1D-ABEC120B3653}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\turnsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TurnSystem.cs",
+              "DocumentMoniker": "C:\\Users\\dunda\\Desktop\\Cille V2\\Assets\\Scripts\\TurnSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TurnSystem.cs",
+              "ToolTip": "C:\\Users\\dunda\\Desktop\\Cille V2\\Assets\\Scripts\\TurnSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TurnSystem.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwEUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T11:30:55.767Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

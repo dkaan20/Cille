@@ -24,7 +24,7 @@ public class Line : MonoBehaviour
                 x++;
                 Debug.Log(x);
             }
-            else if(mr.x -1 >= mar.transform.position.x || mr.x + 1 <= mar.transform.position.x)
+            else if(mr.x -0.8 >= mar.transform.position.x || mr.x + 0.8 <= mar.transform.position.x)
             {
                 Destroy(mar);
                 x++;

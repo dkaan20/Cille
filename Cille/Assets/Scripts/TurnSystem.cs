@@ -24,6 +24,15 @@ public class TurnSystem : MonoBehaviour
         GameObject[] marble = GameObject.FindGameObjectsWithTag("Marble");
         if(marble.Length <= 0)
         {
+            pocket.p1 += line.player1Score;
+            pocket.p2 += line.player2Score;
+            pocket.p1_text.text = "In Pocket: " + pocket.p1.ToString();
+            pocket.p2_text.text = "In Pocket: " + pocket.p2.ToString();
+            line.player1Score = 0;
+            line.player2Score = 0;
+            line.text1.text = "Player 1 \n" + line.player1Score.ToString();
+            line.text2.text = "Player 1 \n" + line.player2Score.ToString();
+
             if (pocket.p1 <= 0)
             {
                 panel.SetActive(true);
@@ -36,14 +45,6 @@ public class TurnSystem : MonoBehaviour
             }
             else
             {
-                pocket.p1 += line.player1Score;
-                pocket.p2 += line.player2Score;
-                pocket.p1_text.text = "In Pocket: " + pocket.p1.ToString();
-                pocket.p2_text.text = "In Pocket: " + pocket.p2.ToString();
-                line.player1Score = 0;
-                line.player2Score = 0;
-                line.text1.text = "Player 1 \n" + line.player1Score.ToString();
-                line.text2.text = "Player 1 \n" + line.player2Score.ToString();
                 input.gameObject.SetActive(true);
             } 
         }
@@ -63,5 +64,10 @@ public class TurnSystem : MonoBehaviour
     public void reload()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
