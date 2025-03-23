@@ -39,9 +39,10 @@ public class MarbleMove : MonoBehaviour
             Vector3 mouseWorldPos = cam.ScreenToWorldPoint(new Vector3(mousePos.x, 0, cam.transform.position.y - cilleLike.transform.position.y));
 
             Vector3 direction = (mouseWorldPos - cilleLike.position).normalized;
+            direction.y = 0;
 
             arrow.position = cilleLike.position - direction * 2;
-            arrow.rotation = Quaternion.LookRotation(-direction, Vector3.forward);
+            arrow.rotation = Quaternion.LookRotation(-direction, Vector3.up) * Quaternion.Euler(0, 0, 90);
             //float angle = Vector3.Angle(transform.forward, direction);
             //arrow.RotateAround(cilleLike.position, Vector3.forward, angle);
             Debug.Log(direction);

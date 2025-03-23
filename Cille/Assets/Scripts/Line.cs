@@ -5,24 +5,32 @@ using UnityEngine;
 public class Line : MonoBehaviour
 {
     public TurnSystem turnSystem;
-    private int player1Score = 0;
-    private int player2Score = 0;
+    public int player1Score = 0;
+    public int player2Score = 0;
 
     public TMPro.TMP_Text text1;
     public TMPro.TMP_Text text2;
     public IEnumerator TakeMarble()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
         int x = 0;
         GameObject[] marble = GameObject.FindGameObjectsWithTag("Marble");
         foreach (GameObject mar in marble)
         {
-            if(mar.gameObject.transform.position.z >= 10.03 || mar.gameObject.transform.position.y <= -10.03)
+            Marble mr = mar.GetComponent<Marble>();
+            if (mar.gameObject.transform.position.z >= 10.2 || mar.gameObject.transform.position.z <= 9.8)
             {
                 Destroy(mar);
                 x++;
                 Debug.Log(x);
-            } 
+            }
+            else if(mr.x -1 >= mar.transform.position.x || mr.x + 1 <= mar.transform.position.x)
+            {
+                Destroy(mar);
+                x++;
+            }
+
+            
         }
         if (turnSystem.player == 1)
         {

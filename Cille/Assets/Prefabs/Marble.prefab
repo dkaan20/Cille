@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3134938895174689115}
   - component: {fileID: 2344222743121562448}
   - component: {fileID: 95656200802403334}
+  - component: {fileID: -4439330515405076827}
   m_Layer: 0
   m_Name: Marble
   m_TagString: Marble
@@ -135,4 +136,19 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
+--- !u!114 &-4439330515405076827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485877267453379185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e8dd54a42cff84295a997639aed1f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 1.3
+  line: {fileID: 0}
+  y: 0
